@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --color-ink: #0f2a3d;
+  --color-ink-soft: #3d5a6c;
+  --color-surface: #f4f8fb;
+  --color-panel: #ffffff;
+  --color-accent: #0d7a6f;
+  --color-accent-dark: #095e56;
+  --color-ok: #157a45;
+  --color-ok-bg: #e8f7ee;
+  --color-bad: #b42318;
+  --color-bad-bg: #fdecea;
+  --color-line: #d5e2ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #c8e6e2 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #d4e4f0 0%, transparent 50%),
+    linear-gradient(180deg, #eef4f8 0%, #e4edf3 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(15, 42, 61, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 42, 61, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
